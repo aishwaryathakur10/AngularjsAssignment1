@@ -1,0 +1,85 @@
+<!--<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>-->
+
+
+
+<!--<form  ng-app="myApp"  ng-controller="Assignment5Controller"
+name="myForm" ng-submit="submitForm()" novalidate>-->
+<div ng-controller="Assignment5Controller">
+<form name="myForm" ng-submit="submitForm()" novalidate>
+<div align="center">
+
+  <h2>Registration Form</h2>
+  <br> <br>
+
+<p>First Name:<br>
+  <input type="text" name="fuser" ng-model="fuser"  ng-minlength="3" ng-maxlength="10" required>
+  <span style="color:red" ng-show="myForm.fuser.$dirty && myForm.fuser.$invalid">
+  <span ng-show="myForm.fuser.$error.required">First name is required.</span>
+  <span ng-show="myForm.fuser.$error.minlength">minlength=3.</span>
+  </span>
+</p>
+
+<p>Last Name:<br>
+  <input type="text" name="luser" ng-model="luser" required>
+  <span style="color:red" ng-show="myForm.luser.$dirty && myForm.luser.$invalid">
+  <span ng-show="myForm.luser.$error.required">Last name is required.</span>
+  </span>
+</p>
+
+<p>Email:<br>
+  <input type="email" name="email" ng-model="email" required>
+  <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+  </span>
+</p>
+
+<p>Phone Number:<br>
+ <input type="number" ng-model="mobile_number" name="mobile_number" placeholder="enter valid Phone Number" ng-pattern="/^[7-9][0-9]{9}$/" required>
+ <span style="color:red" ng-show="myForm.mobile_number.$dirty && myForm.mobile_number.$invalid">
+  <span ng-show="myForm.mobile_number.$error.required">Phone number is required.</span>
+    <span ng-show="myForm.mobile_number.$error.pattern">Please enter valid number!</span>
+</p>
+
+
+<p>Select Gender<br>
+      <select name="select" ng-model="gender"  required> 
+ <option value="Male">Male</option>
+  <option value="Female">Female</option>
+    </select>
+</p>   
+ 
+<p>Select City<br>
+      <select name="select" ng-model="city"  required>
+  <option value="Indore">Indore</option>
+   <option value="Pune">Pune</option>
+  <option value="Mumbai">Mumbai</option>
+    </select>
+</p>   
+ 
+<p>
+  <button type="submit" class="btn btn-primary btn-large center" 
+  ng-disabled="currentState === 'select' || myForm.fuser.$dirty && myForm.fuser.$invalid || myForm.luser.$dirty && myForm.luser.$invalid || myForm.email.$dirty && myForm.email.$invalid || myForm.mobile_number.$dirty && myForm.mobile_number.$invalid">
+ Submit </button>
+
+&nbsp;
+&nbsp;
+  <button class="btn btn-primary btn-large center" 
+        type="reset" 
+        ng-click="reset()">Clear
+       </button>
+
+</p>
+
+
+        <p ng-repeat="user in userArray">
+            {{ user }}
+        </p>
+    
+
+</div>
+</form>
+</div>

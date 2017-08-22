@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="myText='Aishwarya Thakur'">
+
+<p ng-bind="myText"></p>
+
+</div>
+
+</body>
+</html>

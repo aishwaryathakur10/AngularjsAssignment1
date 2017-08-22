@@ -1,0 +1,47 @@
+<!--<!DOCTYPE html>
+<html ng-app="myFilterApp">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+<body>-->
+
+<form>
+<div ng-controller="Assignment4Controller">
+    <div align="center">
+<table align="center">
+    <tr>	
+    First Name : <input type="text"  ng-model="fname" placeholder="Enter your First Name" > <br/> <br/>
+    </tr>
+    <tr>
+    Last Name : <input type="text"  ng-model="lname" placeholder="Enter your Last Name" ><br/> <br/>
+    </tr>
+    <tr>
+    Currency : <input type="text"  ng-model="curr" placeholder="Enter amount" ><br/> <br/>
+    </tr>
+    </table>
+
+<p>UpperCase Filter: </p>
+    <h3 ng-bind="(fname) | uppercase"></h3>
+    <h3 ng-bind="(lname) | uppercase"></h3>
+     <br><br>
+     <p> LowerCase Filter: </p>
+      <h3 ng-bind="(fname) | lowercase"></h3>
+     <h3 ng-bind="(lname) | lowercase"></h3>
+  <br><br>
+
+  <p> Currency Filter: </p>
+ <h3 ng-bind="(curr)|currency"></h3>
+     
+    </div>	
+</div>
+</form>
+<!--</body>
+</html> -->
+
+<!--<script>
+    var myFilterController = angular.module('myFilterApp', []);
+myFilterController.controller('myFilterController', function($scope) {
+	$scope.fname = '';
+	$scope.lname='';
+	$scope.curr='';
+  }); 
+
+  </script>-->

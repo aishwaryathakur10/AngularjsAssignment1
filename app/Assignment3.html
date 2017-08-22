@@ -1,0 +1,21 @@
+
+    <title>Employee Information:</title>
+             
+         
+  <fieldset style="background-color:#DDE4E9;">                        
+    <legend>Employee Information</legend>             
+    
+    <div ng-controller="Assignment3Controller">  
+      <label>Search Any Field: <input ng-model="searchText"></label>
+      <ul ng-repeat="emp in employees | filter:searchText">
+      
+         <li>Id : {{ emp.Id }}</li>  
+        <li>Name : {{ emp.firstName + ' ' + emp.lastName }}</li>  
+        <li>Technology : {{ emp.Technology }}</li>  
+        
+          
+    </ul>  
+  </div>    
+           
+ </fieldset>             
+ 
